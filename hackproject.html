@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./hackproject.css">
+</head>
+<body>
+    
+    <div id="header" class="head bg-secondary row m-0 justify-content-center fixed-top w-100">
+        <div class="d-flex row h-100 px-0">
+            <div class="w-auto h-100 px-0"id="logo">
+                <img class="h-100" src="https://media1.giphy.com/media/7kn27lnYSAE9O/200.webp?cid=ecf05e47mwx2cuu86ct9i80fhmbahffgmbvl4uq2i6o0b0rq&rid=200.webp&ct=g" alt="logo" class="logo">
+            </div>
+            <div class="col" id="PageLink">
+                <div class="row  h-100 justify-content-between">
+                    <div class="col-4 d-flex h-100 align-items-end">
+                        <div class="row ">
+                            <button type="button" class=" btn btn-secondary border-0 rounded-0 col border-end border-secondary-subtle"> 
+                                <h5 class="text-center mb-0 "id="languageChoose">首頁</h5>
+                            </button>
+                            <button type="button" class=" btn btn-secondary border-0 rounded-0 col border-end border-secondary-subtle">
+                                <h5 class="text-center mb-0"id="languageChoose">關於</h5>
+                            </button>
+                            <button type="button" class=" btn btn-secondary border-0 rounded-0 col border-end border-secondary-subtle">
+                                <h5 class="text-center mb-0">QAGPT</h5>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-5 gap-3 d-flex align-items-center">
+                        <button class="btn btn-primary w-50 fw-bold" id="languageChoose">註冊</button>
+                        <button class="btn btn-info w-50 fw-bold" id="languageChoose">登入</button>
+                        <select name="language" id="language">
+                            <option selected value="English">English</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Korean">Korean</option>
+                            <option value="French">French</option>
+                            <option value="German">German</option>
+                            <option value="Italian">Italian</option>
+                        </select>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="neck"class="w-100 mx-0 bg-secondary-subtle row align-items-center justify-content-center text-center ">
+        <div>
+            <h2 class="mb-0 px-0 fw-bold" id="languageChoose">想訓練專屬於自己的文本機器人嗎?</h2>
+            <br>
+            <h2 class="mb-0 px-0 fw-bold"id="languageChoose">不論是應用在:客服、問答機器人都可以輕鬆做到</h2>
+            <br>
+            <h2 class="mb-0 px-0 fw-bold"id="languageChoose">只要加入會員並上傳您的資料即可輕鬆產生自己所需的機器人</h2>
+        </div>
+        <div>
+            <h2 class="fw-bold"id="languageChoose">還不是會員嗎?</h2>
+            <button onclick="sign()" class="btn btn-info mt-4"><h4 class="px-5 my-auto"id="languageChoose">註冊會員</h4></button>
+        </div>
+    </div>
+    <div id="abdomen" class="w-100 mx-0 bg-dark-subtle row px-0">
+        <div class="col p-5">
+            <h3 class="fw-bold"id="languageChoose">為什麼要使用AI產生問答機器人?用AI有什麼好處?</h3>
+        </div>
+        <div class="col d-flex align-items-center justify-content-center">
+            <div class="accordion accordion-flush w-75" id="accordionFlushExample">
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button id="languageChoose" class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        提供即時且高效的客戶服務
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"id="languageChoose">AI問答機器人可以在24小時7天不間斷地提供即時回應，無需等待人工客服的回覆時間。這可以大幅提升客戶滿意度，並節省客戶等待時間。</div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button id="languageChoose" class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        節省人力資源
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body" id="languageChoose">使用AI問答機器人可以減少對人工客服人員的依賴，降低企業的人力成本。同時，AI問答機器人能夠處理大量的問題和諮詢，減輕了客服人員的工作負擔，使他們能夠專注於更複雜的客戶需求。</div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button id="languageChoose" class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        提供一致且準確的回答
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body" id="languageChoose">AI問答機器人可以根據事先設定的知識庫或訓練資料，提供一致且準確的回答，避免了人工客服可能因個人經驗或知識不足而導致的回答不一致或錯誤。</div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button id="languageChoose" class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseOne">
+                            提供個人化的服務
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body"id="languageChoose">AI問答機器人可以根據使用者的需求和偏好，提供個人化的回答和建議。透過機器學習和自然語言處理技術，AI問答機器人能夠理解使用者的語言並根據其需求進行回應，提供更貼近使用者的體驗。</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button id="languageChoose" class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseOne">
+                            改進客戶支援和產品改進
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body "id="languageChoose">AI問答機器人可以收集並分析使用者的問題和回饋，幫助企業識別客戶需求和痛點，從而改進產品和服務。這可以幫助企業更好地了解客戶需求並作出相應的調整，提升客戶滿意度和忠誠度。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="knee" class="bg-body-secondary row mx-0">
+        <div class="col"></div>
+        <div class="col p-5 d-flex justify-content-end"><h2 class="fw-bold" id="languageChoose">我們支持以上語言</h2></div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+        integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+        crossorigin="anonymous"></script>
+    <script>
+        var language = document.getElementById("language");
+        var languageChoose = document.querySelectorAll("#languageChoose");
+        let languageData ;
+        fetch('/HackProject/language.json')
+        .then(response => response.json())
+        .then(data => {
+            language.addEventListener("change", function(){
+                for (var item in data){
+                    if(item == language.value){
+
+                        languageData = Object.values(data[item]);
+                    }
+                }
+                languageChoose.forEach(function(item,index){
+                    
+                    item.innerText = languageData[0][index];
+                })
+            })
+            window.onload = function(){
+                for (var item in data) {
+                    if (item == language.value) {
+
+                        languageData = Object.values(data[item]);
+                    }
+                }
+                languageChoose.forEach(function (item, index) {
+
+                    item.innerText = languageData[0][index];
+                })
+            }
+        })
+        .catch(error => {
+            // 在這裡處理錯誤
+            console.error(error);
+        });
+        
+    </script>
+    <script>
+
+    </script>
+</body>
+</html>
