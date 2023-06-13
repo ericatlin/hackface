@@ -1,0 +1,411 @@
+body,html,h1,h2,h3,h4,h5,h6,p,span,img,ul,li{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    position: relative;
+}
+$h1text:2rem;
+$h2text:1.5rem;
+$h3text:1rem;
+$mainBlack:#000000;
+$mainWhite:#FFFFFF;
+$mainGray:#BBBBBB;
+$mainDeepGray:#919191;
+$mainBlue:#66CCFF;
+$mainBlue2:#AEDFF7;
+$hoverBlue:#2277A7;
+$hoverBlue2:#82C9E7;
+
+
+a{
+    text-decoration: none;
+    color: $mainBlack;
+    
+}
+li{
+        list-style: none;
+    }
+.pdlr{
+    box-sizing: border-box;
+    padding: 0 10%;
+}
+.header{
+    box-sizing: border-box;
+    padding: 0 10%;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: $mainDeepGray;
+    justify-content: space-between;
+    img{
+    height: 100%;
+    width: 100px;
+    }
+    ul{
+        display: flex;
+        height: 100%;
+        align-items: end;   
+        align-items: center;
+        li{
+            text-decoration: none;
+            list-style: none;
+            padding: 5px 10px;
+            font: {
+                size:$h2text;
+            }
+        }  
+        &:first-child{
+            align-items: end;
+            li:first-child{
+                padding: 0px;
+                border: 0px;
+                display: flex;
+            }
+            li:hover{
+                background-color: $mainGray;
+            }
+
+        }
+    }
+    .headinfo {
+        li{
+            border-right:1px solid $mainGray; 
+            box-sizing: border-box;
+            padding-bottom:5px;
+        }    
+    }
+    .headinfo {
+        li{
+            border-right:1px solid $mainGray; 
+            box-sizing: border-box;
+            padding-bottom:5px;
+            
+        }    
+    }
+    .account{
+        button{
+            width: 100px;
+            height: 30px;
+            font-size: $h3text;
+            cursor: pointer;
+            &:hover{
+            box-sizing: border-box;
+            box-shadow: 5px 5px  gray;
+            }
+        }
+        .sign{
+            background-color: $mainBlue;
+            border:0px{
+                radius:5px;
+            }
+            &:hover{
+            background-color: $hoverBlue;
+            }
+        }
+        .login{
+            background-color: $mainBlue2;
+            border:0px{
+                radius:5px
+            }
+            &:hover{
+            background-color: $hoverBlue2;
+            }
+        }
+        
+        select{
+            width: 80px;
+            height: 50px;
+            background-color: $mainDeepGray;
+            border: 2px solid $mainBlack;
+            img{
+                width: 100%;
+                height: auto !important;
+            }
+        }
+    }
+}
+.main{
+    width: 100%;
+    height: auto;
+}
+.useinfo{
+    display: flex;
+    height: 500px;
+    width: 100%;
+
+    @extend .pdlr;
+
+    &:nth-child(1){
+        background-color: $mainGray;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        h1{
+            text-align: center;
+            a{
+                color: $hoverBlue;
+                cursor: pointer;
+                text-decoration:underline;
+            }
+        }
+        button{
+            margin-top: 30px;
+            width: 300px;
+            height: 60px;
+            background-color:$mainBlue;
+            color: $mainBlack;
+            border: 0px{
+            radius:8px;
+            }
+            font: {
+                size:$h2text;
+                weight:800;
+            }
+            &:hover{
+            box-sizing: border-box;
+            box-shadow: 5px 5px  gray;
+            cursor: pointer;
+            background-color: $hoverBlue;
+        }
+        }
+    }
+    &:nth-child(2){
+
+        background-color: $mainDeepGray;
+        justify-content: space-between;
+        padding-top: 50px ;
+        padding-bottom: 50px ;
+        .accordionbox{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .accordion {
+            width: 500px;
+            background-color: $mainGray;
+            border: 1px solid $mainDeepGray;
+            padding: 10px;
+            cursor: pointer;
+            transition: 0.3s; /* 添加0.5秒的過渡效果 */
+            }
+            .accordion h3 {
+            margin: 0;
+            }
+            .content {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 10px;
+            transition: max-height 0.3s ease-out; /* 添加0.5秒的過渡效果 */
+            }
+            .active {
+            background-color: $mainWhite; /* 被展開的手風琴樣式 */
+            }
+        }
+    }
+    &:nth-child(3){
+        height: 600px;
+        li{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100px;
+        }
+        padding-top: 50px ;
+        justify-content: space-between;
+        background-color: $mainGray;
+        .flags{
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: start;
+            gap:20px;
+
+        }
+        .flag {
+            width: 90px;
+            height: 55px;
+            margin-bottom: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            }
+                    
+        /* 台灣國旗 */
+        .taiwan {
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1280px-Flag_of_the_Republic_of_China.svg.png');
+        }
+
+        /* 美國國旗 */
+        .usa {
+        background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png');
+        }
+
+        /* 日本國旗 */
+        .japan {
+        background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1920px-Flag_of_Japan.svg.png');
+        }
+
+        /* 韓國國旗 */
+        .korea {
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png');
+        }
+
+        /* 加拿大國旗 */
+        .canada {
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/255px-Flag_of_Canada.svg.png');
+        }
+
+        /* 英國國旗 */
+        .uk {
+        background-image: url('https://www.ibanner.com.tw/wp-content/uploads/2021/05/%E8%8B%B1%E5%9C%8B.jpg');
+        }
+
+        /* 澳洲國旗 */
+        .australia {
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/255px-Flag_of_Australia_%28converted%29.svg.png');
+        }
+
+        /* 法國國旗 */
+        .france {
+        background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/2560px-Flag_of_France.svg.png');
+        }
+
+        /* 德國國旗 */
+        .germany {
+        background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png');
+        }
+
+        /* 義大利國旗 */
+        .italy {
+        background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/2560px-Flag_of_Italy.svg.png');
+        }
+
+        /* 巴西國旗 */
+        .brazil {
+        background-image: url('https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png');
+        }
+                    
+        
+    }
+}
+
+
+#gary {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: #585858ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .form-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: $mainWhite;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .switch-buttons {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px;
+
+      button {
+        padding: 5px 10px;
+        font-size: 16px;
+        background-color: transparent;
+        border: 2px solid $mainDeepGray;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &.active {
+          background-color: $mainBlue;
+          color: #fff;
+          border-color: #aaa;
+        }
+
+        &:not(.active):hover {
+          background-color: $hoverBlue;
+          color: #fff;
+          border-color: #aaa;
+        }
+      }
+    }
+
+    .form-wrapper {
+      padding: 20px;
+
+      form {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .input-group {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+
+          label {
+            width:       120px;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+
+      input[type="email"],
+      input[type="password"],
+      input[type="text"] {
+        flex: 1;
+        padding: 5px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 2px solid $mainGray;
+        transition: border-color 0.3s;
+
+        &:focus {
+          outline: none;
+          border-color: $mainGray;
+        }
+      }
+
+      button#send-code-btn {
+        margin-left: 10px;
+        padding: 5px 10px;
+        font-size: 16px;
+        background-color: $mainBlue;
+        color: $mainWhite;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $hoverBlue;
+        }
+      }
+    }
+
+    button[type="submit"] {
+      padding: 10px;
+      font-size: 18px;
+      background-color: #aaa;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: #666;
+      }
+    }
+  }
+}
+}
+}

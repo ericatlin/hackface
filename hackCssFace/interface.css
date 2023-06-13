@@ -1,0 +1,356 @@
+@charset "UTF-8";
+body, html, h1, h2, h3, h4, h5, h6, p, span, img, ul, li {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+li {
+  list-style: none;
+}
+
+.pdlr, .useinfo {
+  box-sizing: border-box;
+  padding: 0 10%;
+}
+
+.header {
+  box-sizing: border-box;
+  padding: 0 10%;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #919191;
+  justify-content: space-between;
+}
+.header img {
+  height: 100%;
+  width: 100px;
+}
+.header ul {
+  display: flex;
+  height: 100%;
+  align-items: end;
+  align-items: center;
+}
+.header ul li {
+  text-decoration: none;
+  list-style: none;
+  padding: 5px 10px;
+  font-size: 1.5rem;
+}
+.header ul:first-child {
+  align-items: end;
+}
+.header ul:first-child li:first-child {
+  padding: 0px;
+  border: 0px;
+  display: flex;
+}
+.header ul:first-child li:hover {
+  background-color: #BBBBBB;
+}
+.header .headinfo li {
+  border-right: 1px solid #BBBBBB;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+}
+.header .headinfo li {
+  border-right: 1px solid #BBBBBB;
+  box-sizing: border-box;
+  padding-bottom: 5px;
+}
+.header .account button {
+  width: 100px;
+  height: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.header .account button:hover {
+  box-sizing: border-box;
+  box-shadow: 5px 5px gray;
+}
+.header .account .sign {
+  background-color: #66CCFF;
+  border: 0px;
+  border-radius: 5px;
+}
+.header .account .sign:hover {
+  background-color: #2277A7;
+}
+.header .account .login {
+  background-color: #AEDFF7;
+  border: 0px;
+  border-radius: 5px;
+}
+.header .account .login:hover {
+  background-color: #82C9E7;
+}
+.header .account select {
+  width: 80px;
+  height: 50px;
+  background-color: #919191;
+  border: 2px solid #000000;
+}
+.header .account select img {
+  width: 100%;
+  height: auto !important;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+}
+
+.useinfo {
+  display: flex;
+  height: 500px;
+  width: 100%;
+}
+.useinfo:nth-child(1) {
+  background-color: #BBBBBB;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.useinfo:nth-child(1) h1 {
+  text-align: center;
+}
+.useinfo:nth-child(1) h1 a {
+  color: #2277A7;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.useinfo:nth-child(1) button {
+  margin-top: 30px;
+  width: 300px;
+  height: 60px;
+  background-color: #66CCFF;
+  color: #000000;
+  border: 0px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.useinfo:nth-child(1) button:hover {
+  box-sizing: border-box;
+  box-shadow: 5px 5px gray;
+  cursor: pointer;
+  background-color: #2277A7;
+}
+.useinfo:nth-child(2) {
+  background-color: #919191;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.useinfo:nth-child(2) .accordionbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.useinfo:nth-child(2) .accordionbox .accordion {
+  width: 500px;
+  background-color: #BBBBBB;
+  border: 1px solid #919191;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s; /* 添加0.5秒的過渡效果 */
+}
+.useinfo:nth-child(2) .accordionbox .accordion h3 {
+  margin: 0;
+}
+.useinfo:nth-child(2) .accordionbox .content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: max-height 0.3s ease-out; /* 添加0.5秒的過渡效果 */
+}
+.useinfo:nth-child(2) .accordionbox .active {
+  background-color: #FFFFFF; /* 被展開的手風琴樣式 */
+}
+.useinfo:nth-child(3) {
+  height: 600px;
+  padding-top: 50px;
+  justify-content: space-between;
+  background-color: #BBBBBB;
+  /* 台灣國旗 */
+  /* 美國國旗 */
+  /* 日本國旗 */
+  /* 韓國國旗 */
+  /* 加拿大國旗 */
+  /* 英國國旗 */
+  /* 澳洲國旗 */
+  /* 法國國旗 */
+  /* 德國國旗 */
+  /* 義大利國旗 */
+  /* 巴西國旗 */
+}
+.useinfo:nth-child(3) li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+}
+.useinfo:nth-child(3) .flags {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 20px;
+}
+.useinfo:nth-child(3) .flag {
+  width: 90px;
+  height: 55px;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.useinfo:nth-child(3) .taiwan {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/1280px-Flag_of_the_Republic_of_China.svg.png");
+}
+.useinfo:nth-child(3) .usa {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png");
+}
+.useinfo:nth-child(3) .japan {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1920px-Flag_of_Japan.svg.png");
+}
+.useinfo:nth-child(3) .korea {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2560px-Flag_of_South_Korea.svg.png");
+}
+.useinfo:nth-child(3) .canada {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Canada.svg/255px-Flag_of_Canada.svg.png");
+}
+.useinfo:nth-child(3) .uk {
+  background-image: url("https://www.ibanner.com.tw/wp-content/uploads/2021/05/%E8%8B%B1%E5%9C%8B.jpg");
+}
+.useinfo:nth-child(3) .australia {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/255px-Flag_of_Australia_%28converted%29.svg.png");
+}
+.useinfo:nth-child(3) .france {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/2560px-Flag_of_France.svg.png");
+}
+.useinfo:nth-child(3) .germany {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png");
+}
+.useinfo:nth-child(3) .italy {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/2560px-Flag_of_Italy.svg.png");
+}
+.useinfo:nth-child(3) .brazil {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/2560px-Flag_of_Brazil.svg.png");
+}
+
+#gary {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-color: rgba(88, 88, 88, 0.6705882353);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gary .form-container {
+  width: 80%;
+  max-width: 600px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#gary .form-container .switch-buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+#gary .form-container .switch-buttons button {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 2px solid #919191;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#gary .form-container .switch-buttons button.active {
+  background-color: #66CCFF;
+  color: #fff;
+  border-color: #aaa;
+}
+#gary .form-container .switch-buttons button:not(.active):hover {
+  background-color: #2277A7;
+  color: #fff;
+  border-color: #aaa;
+}
+#gary .form-container .form-wrapper {
+  padding: 20px;
+}
+#gary .form-container .form-wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+#gary .form-container .form-wrapper form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+#gary .form-container .form-wrapper form .input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#gary .form-container .form-wrapper form .input-group label {
+  width: 120px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+#gary .form-container .form-wrapper form .input-group input[type=email],
+#gary .form-container .form-wrapper form .input-group input[type=password],
+#gary .form-container .form-wrapper form .input-group input[type=text] {
+  flex: 1;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid #BBBBBB;
+  transition: border-color 0.3s;
+}
+#gary .form-container .form-wrapper form .input-group input[type=email]:focus,
+#gary .form-container .form-wrapper form .input-group input[type=password]:focus,
+#gary .form-container .form-wrapper form .input-group input[type=text]:focus {
+  outline: none;
+  border-color: #BBBBBB;
+}
+#gary .form-container .form-wrapper form .input-group button#send-code-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #66CCFF;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#gary .form-container .form-wrapper form .input-group button#send-code-btn:hover {
+  background-color: #2277A7;
+}
+#gary .form-container .form-wrapper form button[type=submit] {
+  padding: 10px;
+  font-size: 18px;
+  background-color: #aaa;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#gary .form-container .form-wrapper form button[type=submit]:hover {
+  background-color: #666;
+}/*# sourceMappingURL=interface.css.map */
