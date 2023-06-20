@@ -1,9 +1,8 @@
 body{
-    height: 1000px;
+    height: auto;
 }
 #header{
     height: 70px;
-    padding: 0 170px;
     button{
         color:black;
     }
@@ -12,15 +11,83 @@ body{
     }
 }
 #neck{
-    height: 500px;
+
     margin-top: 70px;
     button{
         height: 50px;
     }
 }
-#abdomen{
-    height: 500px;
-}
 #knee{
-    height: 500px;
+    .imgbox{
+        width: 150px;
+        img{
+            height: 90px;
+        }
+    }
+}
+#question{
+    overflow: auto;
+    resize: none;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    &::-webkit-scrollbar {
+        width: 10px; /* 設置滾動條的寬度 */
+        }   
+    &::-webkit-scrollbar-thumb {
+        background-color: #bbbbbb; /* 設置滾動條的顏色 */
+        border-radius: 5px; /* 設置滾動條的圓角 */
+        }
+    &::-webkit-scrollbar-track {
+        background-color: #fff; /* 設置滾動條的背景顏色 */
+        border-radius: 5px; /* 設置滾動條的圓角 */
+        border: none; /* 去掉滾動條的邊框 */
+        }
+}
+.QABody{
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+}
+#QABox{
+    img{
+        height: 15px;
+    }
+}
+.custom-range::-webkit-slider-thumb {
+  background-color: white; /* 设置滑块的颜色 */
+  border:1px gray solid;
+}
+
+.custom-range::-moz-range-thumb {
+   background-color: white; /* 设置滑块的颜色 */
+  border:1px gray solid;
+}
+
+.custom-range::-ms-thumb {
+   background-color: white; /* 设置滑块的颜色 */
+  border:1px #808080 solid;
+}
+
+
+.custom-range::-webkit-slider-runnable-track {
+  background-color: rgb(208, 208, 208); /* 设置滑动条轨道的颜色 */
+}
+
+.custom-range::-moz-range-track {
+  background-color: rgb(208, 208, 208); /* 设置滑动条轨道的颜色 */
+}
+
+.custom-range::-ms-track {
+  background-color: rgb(208, 208, 208); /* 设置滑动条轨道的颜色 */
+}
+
+@media(max-width:767px){
+  .QABody{
+    margin-top: 90px;
+    height: calc(100vh - 90px);
+    }
+}
+@media(max-width:767px){
+  #header{
+    height: auto;
+  }
 }
